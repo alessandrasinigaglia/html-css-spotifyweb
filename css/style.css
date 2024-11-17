@@ -1,17 +1,4 @@
 /*----------------
-    DEBUG
-------------------*/
-.debug .container {
-    border: 2px dashed blueviolet;
-}
-
-.debug .row .col {
-    border: 2px dashed lightcoral;
-    background-color: rgba(240, 128, 128, 0.2);
-    min-height: 200px;
-}
-
-/*----------------
     RESET
 ------------------*/
 * {
@@ -20,82 +7,166 @@
     padding: 0;
 }
 
-/*----------------
-    COMMONS
-------------------*/
-.img-fluid {
-    max-width: 100%;
-}
-
-/*----------------
-    LAYOUT
-------------------*/
 .container {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    /* padding-left: 20px;
-    padding-right: 20px; */
+    
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.gap-10 > .col {
-    padding: 10px;
-}
-.gap-20 > .col {
-    padding: 20px;
-}
-.gap-30 > .col {
-    padding: 30px;
-}
-
-.grow {
-    flex-grow: 1;
-}
-
-/*----------------
-    TYPOGRAPHY
-------------------*/
 body {
-    font-family: "Roboto", serif;
+    height: 100vh;
+    color: #a3a3a3;
+    font-family: "Poppins", sans-serif;
 }
 
-/*----------------
-    BUTTONS
-------------------*/
-.btn {
-    background-color: transparent;
-    font-family: inherit;
-    border: none;
-    padding: 6px 12px;
-    cursor: pointer;
-}
-
-.btn-large {
-    padding: 10px 20px;
-    font-size: 16px;
-}
-
-.btn-primary {
-    background-color: lightcoral;
-    color: #fff;
+.app-wrapper {
+    display: flex;
+    height: calc(100% - 100px);
 }
 
 /*----------------
     HEADER
 ------------------*/
+header {
+    width: 50px;
+    flex-shrink: 1;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    color: #a3a3a3;
+}
+
+.hidden-mobile {
+    display: none;
+}
+
+.show-mobile {
+    display: block;
+}
+
+.main-nav ul {
+    list-style: none;
+}
+
+.nav-white {
+    color: white;
+}
+
+.main-nav li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-nav li img {
+    height: 26px;
+}
+
+.playlist {
+    flex-grow: 1;
+    min-height: 200px;
+    overflow-y: auto;
+    margin-top: 15px;
+}
+
+.playlist-list {
+    font-size: 14px;
+}
+
+.btn-plus {
+    width: 35px;
+    height: 35px;
+    border: none;
+    font-size: 32px;
+    background-color: #a3a3a3;
+    color: black;
+}
+
+.btn-arrow {
+    width: 20px;
+    height: 20px;
+    border-radius: 90%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #a3a3a3;
+    background-color: transparent;
+}
+
+.fa-arrow-down-long {
+    color: #a3a3a3;
+}
+
+.user {
+    min-height: 100px;
+    padding-left: 15px;
+}
+
+.user i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user p:not(:last-child) {
+    color: #a3a3a3;
+    position: relative;
+    bottom: 18px;
+    left: 30px;
+}
+
+.user-white {
+    color: white;
+    position: relative;
+    bottom: 18px;
+    left: 30px;
+}
+
+.btn-user {
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 90%;
+    font-size: 18px;
+    background-color: #a3a3a3;
+    color: white;
+    margin-top: 10px;
+}
+
+p {
+    color: white;
+}
 
 /*----------------
     MAIN
 ------------------*/
+main {
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: brown;
+}
+
+.main-top {
+    background-color: #080b12;
+    height: 65px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-upgrade {
+    background-color: transparent;
+    color: white;
+    border-radius: 40%;
+}
 
 /*----------------
     FOOTER
 ------------------*/
+footer {
+    height: 100px;
+    background-color: chartreuse;
+}
+
 
 /*----------------
     RESPONSIVE
@@ -103,7 +174,28 @@ body {
 ------------------*/
 /* SM >= 576px */
 @media screen and (min-width: 576px) {
-    
+    header {
+        width: 240px;
+        padding-left: 15px;
+    }
+    .logo {
+        padding: 10px;
+    }
+    .hidden-mobile {
+        display: block;
+    }
+    .show-mobile {
+        display: none;
+    }
+    .main-nav li {
+        justify-content: flex-start;
+    }
+    .user i {
+        justify-content: center;
+    }
+    .user {
+        padding-left: 1px;
+    }
 }
 /* MD >= 768px */
 @media screen and (min-width: 768px) {

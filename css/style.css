@@ -20,6 +20,12 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .app-wrapper {
     display: flex;
     height: calc(100% - 100px);
@@ -45,6 +51,10 @@ header {
     display: block;
 }
 
+.main-nav {
+    margin-top: 30px;
+}
+
 .main-nav ul {
     list-style: none;
 }
@@ -67,7 +77,11 @@ header {
     flex-grow: 1;
     min-height: 200px;
     overflow-y: auto;
-    margin-top: 15px;
+    margin-top: 30px;
+}
+
+.playlist-title {
+    margin-bottom: 15px;
 }
 
 .playlist-list {
@@ -133,30 +147,156 @@ header {
     margin-top: 10px;
 }
 
-p {
-    color: white;
-}
-
 /*----------------
     MAIN
 ------------------*/
+
 main {
     flex-grow: 1;
     overflow-y: auto;
-    background-color: brown;
+    background-color: #141922;
 }
 
 .main-top {
     background-color: #080b12;
-    height: 65px;
+    height: 70px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .btn-upgrade {
     background-color: transparent;
     color: white;
-    border-radius: 40%;
+    border-radius: 30px;
+    border: 1px solid white;
+    padding: 10px 30px; 
+    font-size: 14px; 
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+/*-------------
+    SECTION
+--------------*/
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.search p {
+    cursor: pointer;
+    color: #a3a3a3;
+}
+
+.recent {
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.recent h2 {
+    color: white;
+}
+
+.albums {
+    display: flex; 
+    gap: 10px; 
+    justify-content: flex-start; 
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.square {
+    width: 130px; 
+    height: 130px; 
+    background-size: cover; 
+    background-position: center;
+}
+
+.square-item {
+    text-align: center;
+    font-size: 14px;
+    width: 130px;
+    height: auto;
+}
+
+.square-item h3 {
+    color: white;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.square-item p {
+    font-size: 12px;
+}
+
+.suggests {
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.suggests h2 {
+    color: white;
+}
+
+.suggests p {
+    color: #a3a3a3;
+    font-size: 12px;
+}
+
+.artists {
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.artists h2 {
+    color: white;
+}
+
+.artists p {
+    color: #a3a3a3;
+    font-size: 12px;
+}
+
+.circle-item {
+    text-align: center;
+    font-size: 14px;
+    width: 130px;
+    height: auto;
+    display: flex; 
+    gap: 10px; 
+    justify-content: flex-start; 
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.circle {
+    width: 130px; 
+    height: 130px; 
+    border-radius: 100%;
+    background-size: cover; 
+    background-position: center;
+}
+
+.circle-item h3 {
+    color: white;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.artist-profile {
+    display: flex;
+    justify-content: flex-start; 
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 /*----------------
@@ -195,6 +335,9 @@ footer {
     }
     .user {
         padding-left: 1px;
+    }
+    .search {
+        flex-wrap: wrap;
     }
 }
 /* MD >= 768px */

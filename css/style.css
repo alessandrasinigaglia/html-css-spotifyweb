@@ -31,6 +31,11 @@ body {
     height: calc(100% - 100px);
 }
 
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
 /*----------------
     HEADER
 ------------------*/
@@ -207,25 +212,25 @@ main {
 }
 
 .albums {
-    display: flex; 
-    gap: 10px; 
-    justify-content: flex-start; 
+    display: flex;  
     flex-wrap: wrap;
     margin-top: 20px;
+    width: 100%;
 }
 
 .square {
-    width: 130px; 
-    height: 130px; 
-    background-size: cover; 
-    background-position: center;
+    position: relative;
 }
 
 .square-item {
-    text-align: center;
     font-size: 14px;
-    width: 130px;
+    width: calc(100% / 2);
     height: auto;
+    padding: 5px;
+}
+
+.description {
+    text-align: center;
 }
 
 .square-item h3 {
@@ -267,36 +272,34 @@ main {
 }
 
 .circle-item {
-    text-align: center;
-    font-size: 14px;
-    width: 130px;
-    height: auto;
-    display: flex; 
-    gap: 10px; 
-    justify-content: flex-start; 
-    flex-wrap: wrap;
     margin-top: 20px;
+    font-size: 14px;
+    height: auto;
+    padding: 5px;
 }
 
 .circle {
-    width: 130px; 
-    height: 130px; 
-    border-radius: 100%;
-    background-size: cover; 
-    background-position: center;
+    border-radius: 50%;
 }
 
 .circle-item h3 {
     color: white;
     margin-top: 10px;
     font-size: 14px;
+    text-align: center;
 }
 
 .artist-profile {
-    display: flex;
-    justify-content: flex-start; 
+    display: flex;  
     flex-wrap: wrap;
-    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.img-fluid-circle {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
 }
 
 /*----------------
@@ -305,6 +308,8 @@ main {
 footer {
     height: 100px;
     background-color: chartreuse;
+    position: sticky;
+    z-index: 10;
 }
 
 
@@ -342,11 +347,15 @@ footer {
 }
 /* MD >= 768px */
 @media screen and (min-width: 768px) {
-    
+    .square-item{
+        width: calc(100% / 4);
+    }
 }
 /* LG >= 992px */
 @media screen and (min-width: 992px) {
-    
+    .square-item{
+        width: calc(100% / 6);
+    }
 }
 /* XL >= 1200px */
 @media screen and (min-width: 1200px) {
